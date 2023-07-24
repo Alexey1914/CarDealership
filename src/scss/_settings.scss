@@ -1,8 +1,7 @@
 // variables
    $minWidth: 320px;
-   $maxWidthContainer: 1230px;
-   $mainFontFamily: '', sans-serif;
-   $fontFamily1: '', sans-serif;
+   $maxWidthContainer: 1280px;
+   $mainFontFamily: 'Inter', sans-serif;
    $fontSize: 16px;
    $mainColor: #FFFFFF;
    $fontColor1: #000000;
@@ -24,7 +23,7 @@ $maxWidth: 1924;
 // mexins
 
 // fonts%3b
-@import url('');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400%3b500%3b600%3b700%3b800&display=swap');
 // fonts
 
 // ---------------------
@@ -68,7 +67,7 @@ body {
    font-size: 14px;
    -ms-text-size-adjust: 100%;
    font-family: $mainFontFamily;
-   color: $mainColor;
+   color: $fontColor1;
    background: #FFFFFF;
 }
 

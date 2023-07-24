@@ -1,4 +1,4 @@
-@import url("");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400%3b500%3b600%3b700%3b800&display=swap");
 
 * {
   padding: 0;
@@ -38,8 +38,8 @@ body {
   line-height: 1;
   font-size: 14px;
   -ms-text-size-adjust: 100%;
-  font-family: "", sans-serif;
-  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+  color: #000000;
   background: #FFFFFF;
 }
 
@@ -130,7 +130,7 @@ a {
 }
 
 [class*=_container] {
-  max-width: 1260px;
+  max-width: 1310px;
   margin: 0 auto;
   padding: 0 15px;
 }
