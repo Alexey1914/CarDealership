@@ -5,6 +5,7 @@
    $fontSize: 16px;
    $mainColor: #FFFFFF;
    $fontColor1: #000000;
+   $redColor: #FA002C;
 // variables
 
 // mexins
@@ -64,7 +65,8 @@ body {
    width: 100%;
    font-size: 100%;
    line-height: 1;
-   font-size: 14px;
+   font-weight: 400;
+   font-size: $fontSize;
    -ms-text-size-adjust: 100%;
    font-family: $mainFontFamily;
    color: $fontColor1;
@@ -128,7 +130,7 @@ h6 {
 }
 
 a {
-   color: $mainColor;
+   color: $fontColor1;
 }
 
 /**/

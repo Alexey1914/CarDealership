@@ -36,7 +36,8 @@ body {
   width: 100%;
   font-size: 100%;
   line-height: 1;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 16px;
   -ms-text-size-adjust: 100%;
   font-family: "Inter", sans-serif;
   color: #000000;
@@ -112,7 +113,7 @@ h6 {
 }
 
 a {
-  color: #FFFFFF;
+  color: #000000;
 }
 
 /**/
@@ -157,4 +158,137 @@ a {
 
 [hidden] {
   display: none;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+.header__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 30;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  padding-top: 39px;
+  padding-bottom: 39px;
+}
+
+.header__media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 27px;
+     -moz-column-gap: 27px;
+          column-gap: 27px;
+  row-gap: 15px;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  row-gap: 15px;
+}
+
+.nav__link {
+  line-height: normal;
+}
+
+.media__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12px;
+}
+
+.media__link:before {
+  font-size: 29px;
+}
+
+.media__phone {
+  display: block;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.media__phone:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.icon_youtube {
+  position: relative;
+}
+
+.icon_youtube:before {
+  font-size: 18px;
+  color: #FFF;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+
+._youtube-icon {
+  width: 29.98px;
+  height: 29.98px;
+  background: #000;
+  border-radius: 50%;
+}
+
+@media (min-width: 767.98px) {
+  .header__burger {
+    display: none;
+  }
+
+  .nav__link {
+    -webkit-transition: color 0.3s ease 0s;
+    -o-transition: color 0.3s ease 0s;
+    transition: color 0.3s ease 0s;
+  }
+
+  .nav__link:hover {
+    color: #FA002C;
+    font-weight: 600;
+    -webkit-transition: color 0.3s ease 0s;
+    -o-transition: color 0.3s ease 0s;
+    transition: color 0.3s ease 0s;
+  }
+
+  .nav__burger {
+    display: none;
+  }
 }

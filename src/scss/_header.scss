@@ -1,0 +1,132 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    &__wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 30;
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 10px;
+        padding-top: 39px;
+        padding-bottom: 39px;
+    }
+    &__logo {
+    }
+    &__nav {
+    }
+    &__media {
+        display: flex;
+        align-items: center;
+        column-gap: 27px;
+        row-gap: 15px;
+    }
+    &__burger {
+        @media (min-width: 767.98px){
+            display: none;
+        }
+    }
+}
+.logo {
+    &__link {
+    }
+}
+.nav {
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 40px;
+        row-gap: 15px;
+    }
+    &__item {
+    }
+    &__link {
+        line-height: normal;
+        @media (min-width: 767.98px){
+            transition: color 0.3s ease 0s;
+            &:hover{
+                color: $redColor;
+                font-weight: 600;
+                transition: color 0.3s ease 0s;
+            }
+        }
+    }
+    &__burger {
+        @media (min-width: 767.98px){
+            display: none;
+        }
+    }
+}
+.burger {
+    &__media {
+    }
+    &__phone {
+    }
+    &__social {
+    }
+    &__privacy {
+    }
+}
+.social-burger {
+    &__link {
+    }
+}
+.icon {
+    &_telegram {
+    }
+    &_whatsup {
+    }
+    &_youtube {
+    }
+}
+.privacy {
+    &__link {
+    }
+}
+.media {
+    &__social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+    &__link {
+        &:before{
+            font-size: 29px;
+        }
+    }
+    &__call {
+    }
+    &__phone {
+        display: block;
+        font-weight: 500;
+        line-height: normal;
+        &:not(:last-child){
+            margin-bottom: 4px;
+        }
+    }
+}
+.icon_youtube{
+    position: relative;
+    &:before{
+        font-size: 18px;
+        color: #FFF;
+        position: absolute;
+        top: 20%;
+        left: 20%;
+    }
+}
+._youtube-icon{
+    width: 29.98px;
+    height: 29.98px;
+    background: #000;
+    border-radius: 50%;
+}
