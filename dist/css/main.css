@@ -186,9 +186,9 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-column-gap: 10px;
-     -moz-column-gap: 10px;
-          column-gap: 10px;
+  -webkit-column-gap: 15px;
+     -moz-column-gap: 15px;
+          column-gap: 15px;
   padding-top: 39px;
   padding-bottom: 39px;
 }
@@ -200,10 +200,70 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   -webkit-column-gap: 27px;
      -moz-column-gap: 27px;
           column-gap: 27px;
   row-gap: 15px;
+  position: relative;
+}
+
+.header__burger {
+  width: 24px;
+  height: 16px;
+  position: relative;
+}
+
+.header__burger:after,
+.header__burger:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #262626;
+  border-radius: 5px;
+}
+
+.header__burger:after {
+  bottom: 0;
+}
+
+.header__burger:before {
+  top: 0;
+}
+
+.header__burger span {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #262626;
+  border-radius: 5px;
+}
+
+.header__burger.active-burger span {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header__burger.active-burger:after {
+  bottom: 6px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header__burger.active-burger:before {
+  top: 8px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .nav__list {
@@ -213,6 +273,11 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-column-gap: 40px;
      -moz-column-gap: 40px;
           column-gap: 40px;
@@ -221,6 +286,101 @@ a {
 
 .nav__link {
   line-height: normal;
+}
+
+.nav__burger {
+  margin-top: 60px;
+}
+
+.burger__media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.burger__phone {
+  position: relative;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 83.3%;
+  padding-left: 32px;
+  margin-bottom: 24px;
+}
+
+.burger__phone:before {
+  content: url("../img/header/phone.svg");
+  position: absolute;
+  top: -4px;
+  left: 0;
+}
+
+.burger__social {
+  margin-bottom: 60px;
+}
+
+.burger__privacy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+
+.social-burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+
+.social-burger ._youtube-icon {
+  background: #FA002C;
+}
+
+.social-burger__link:before {
+  font-size: 30px;
+  color: #FA002C;
+}
+
+.social-burger__link.icon_youtube:before {
+  font-size: 18px;
+}
+
+.privacy__link {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  line-height: 175%;
+  position: relative;
+}
+
+.privacy__link:before {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .media__social {
@@ -233,11 +393,16 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 12px;
 }
 
 .media__link:before {
   font-size: 29px;
+  -webkit-transition: color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
 }
 
 .media__phone {
@@ -269,7 +434,7 @@ a {
   border-radius: 50%;
 }
 
-@media (min-width: 767.98px) {
+@media (min-width: 768px) {
   .header__burger {
     display: none;
   }
@@ -282,13 +447,98 @@ a {
 
   .nav__link:hover {
     color: #FA002C;
-    font-weight: 600;
     -webkit-transition: color 0.3s ease 0s;
     -o-transition: color 0.3s ease 0s;
     transition: color 0.3s ease 0s;
   }
 
   .nav__burger {
+    display: none;
+  }
+
+  .media__link:not(:last-child):hover:before {
+    color: #FA002C;
+    -webkit-transition: color 0.3s ease 0s;
+    -o-transition: color 0.3s ease 0s;
+    transition: color 0.3s ease 0s;
+  }
+
+  .media__phone:hover {
+    text-decoration: underline;
+  }
+
+  ._youtube-icon {
+    -webkit-transition: background-color 0.3s ease 0s;
+    -o-transition: background-color 0.3s ease 0s;
+    transition: background-color 0.3s ease 0s;
+  }
+
+  ._youtube-icon:hover {
+    -webkit-transition: background-color 0.3s ease 0s;
+    -o-transition: background-color 0.3s ease 0s;
+    transition: background-color 0.3s ease 0s;
+    background: #FA002C;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__container {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+
+  .header__logo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
+  .header__nav {
+    position: fixed;
+    top: 88px;
+    left: -120%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+  }
+
+  .header__nav.active-burger {
+    left: 0;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+  }
+
+  .logo__link img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .nav__list {
+    row-gap: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .nav__link {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.48px;
+  }
+
+  .media__call {
     display: none;
   }
 }

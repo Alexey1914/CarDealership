@@ -15,68 +15,190 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        column-gap: 10px;
+        column-gap: 15px;
         padding-top: 39px;
         padding-bottom: 39px;
+        @media (max-width: 768px){
+            padding-top: 8px;
+            padding-bottom: 8px;
+            justify-content: start;
+            column-gap: 20px;
+        }
     }
     &__logo {
+        @media (max-width: 768px){
+            flex: 1 1 auto;
+        }
     }
     &__nav {
+        @media (max-width: 768px){
+            position: fixed;
+            top: 88px;
+            left: -120%;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            transition: all 0.5s ease 0s;
+            &.active-burger{
+                left: 0;
+                transition: all 0.5s ease 0s;
+            }
+        }
     }
     &__media {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
+        justify-content: end;
         column-gap: 27px;
         row-gap: 15px;
+        position: relative;
     }
     &__burger {
-        @media (min-width: 767.98px){
+        width: 24px; 
+        height: 16px;
+        position: relative;
+        &:after,
+        &:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background: #262626;
+            border-radius: 5px;
+        }
+        &:after{
+            bottom: 0;
+        }
+        &:before{
+            top: 0;
+        }
+        & span {
+            position: absolute;
+            top: 7px;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background: #262626;
+            border-radius: 5px;
+        }
+        &.active-burger{
+            & span {
+                opacity: 0;
+                visibility: hidden;
+            }
+            &:after{
+                bottom: 6px;
+                transform: rotate(45deg);
+            }
+            &:before{
+                top: 8px;
+                transform: rotate(-45deg);
+            }
+        }
+        @media (min-width: 768px){
             display: none;
         }
     }
 }
 .logo {
     &__link {
+        @media (max-width: 768px){
+            & img{
+                width: 48px;
+                height: 48px;
+            }
+        }
     }
 }
 .nav {
     &__list {
         display: flex;
         align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
         column-gap: 40px;
         row-gap: 15px;
+        @media (max-width: 768px){
+            row-gap: 40px;
+            flex-direction: column;
+        }
     }
     &__item {
     }
     &__link {
         line-height: normal;
-        @media (min-width: 767.98px){
+        @media (min-width: 768px){
             transition: color 0.3s ease 0s;
             &:hover{
                 color: $redColor;
-                font-weight: 600;
+                // font-weight: 600;
                 transition: color 0.3s ease 0s;
             }
         }
+        @media (max-width: 768px){
+            font-size: 24px;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 0.48px;
+        }
     }
     &__burger {
-        @media (min-width: 767.98px){
+        margin-top: 60px;
+        @media (min-width: 768px){
             display: none;
         }
     }
 }
 .burger {
     &__media {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     &__phone {
+        position: relative;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 83.3%; 
+        padding-left: 32px;
+        margin-bottom: 24px;
+        &:before{
+            content: url('@img/header/phone.svg');
+            position: absolute;
+            top: -4px;
+            left: 0;
+        }
     }
     &__social {
+        margin-bottom: 60px;
     }
     &__privacy {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 8px;
     }
 }
 .social-burger {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    & ._youtube-icon{
+        background: $redColor;
+    }
     &__link {
+        &:before{
+            font-size: 30px;
+            color: $redColor;
+        }
+        &.icon_youtube{
+            &:before{
+                font-size: 18px;
+            }
+        }
     }
 }
 .icon {
@@ -89,6 +211,20 @@
 }
 .privacy {
     &__link {
+        text-align: center;
+        color: rgba(0, 0, 0, 0.50);
+        font-size: 16px;
+        line-height: 175%;
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            bottom: 3px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.50);
+        }
     }
 }
 .media {
@@ -96,14 +232,29 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 12px;
     }
     &__link {
         &:before{
             font-size: 29px;
+            transition: color 0.3s ease 0s;
+        }
+        @media (min-width: 768px){
+            &:not(:last-child){
+                &:hover{
+                    &:before{
+                        color: $redColor;
+                        transition: color 0.3s ease 0s;
+                    }
+                }
+            }
         }
     }
     &__call {
+        @media (max-width: 768px){
+            display: none;
+        }
     }
     &__phone {
         display: block;
@@ -111,6 +262,11 @@
         line-height: normal;
         &:not(:last-child){
             margin-bottom: 4px;
+        }
+        @media (min-width: 768px){
+            &:hover{
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -129,4 +285,11 @@
     height: 29.98px;
     background: #000;
     border-radius: 50%;
+    @media (min-width: 768px){
+        transition: background-color 0.3s ease 0s;
+        &:hover{
+            transition: background-color 0.3s ease 0s;
+            background: $redColor;
+        }
+    }
 }

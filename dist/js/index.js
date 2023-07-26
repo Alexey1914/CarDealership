@@ -69,16 +69,16 @@
 //       observer.observe(sections);
 //    };
 // }
-// // ----------------------Меню-Бургер------------------
-// function showBurger() {
-//    const burgerMenu = document.querySelector('.header__nav');
-//    const body = document.querySelector('body');
-//    const burgerClass = document.querySelector('.header__burger');
+// ----------------------Меню-Бургер------------------
+function showBurger() {
+   const burgerMenu = document.querySelector('.header__nav');
+   const body = document.querySelector('body');
+   const burgerClass = document.querySelector('.header__burger');
 
-//    burgerClass.addEventListener('click', function() {
-//        burgerClass.classList.toggle('active-burger');
-//        burgerMenu.classList.toggle('active-burger');
-//        body.classList.toggle('lock');
-//    })
-// };
-// showBurger()
+   burgerClass.addEventListener('click', function() {
+       burgerClass.classList.toggle('active-burger');
+       burgerMenu.classList.toggle('active-burger');
+       body.classList.toggle('lock');
+   })
+};
+showBurger()
