@@ -28,17 +28,26 @@
     &__logo {
         @media (max-width: 768px){
             flex: 1 1 auto;
+            position: relative;
+            z-index: 66;
+            transition: transform 0.5s ease 0s;
+            &.active-burger{
+                transform: translateX(110%);
+                transition: transform 0.5s ease 0s;
+            }
         }
     }
     &__nav {
         @media (max-width: 768px){
             position: fixed;
-            top: 88px;
+            top: 0;
             left: -120%;
             width: 100%;
             height: 100%;
             overflow: auto;
             transition: all 0.5s ease 0s;
+            background: #FFF;
+            z-index: 65;
             &.active-burger{
                 left: 0;
                 transition: all 0.5s ease 0s;
@@ -58,6 +67,7 @@
         width: 24px; 
         height: 16px;
         position: relative;
+        z-index: 66;
         &:after,
         &:before{
             content: '';
@@ -67,6 +77,7 @@
             width: 100%;
             background: #262626;
             border-radius: 5px;
+            transition: all 0.3s ease 0s;
         }
         &:after{
             bottom: 0;
@@ -82,19 +93,23 @@
             width: 100%;
             background: #262626;
             border-radius: 5px;
+            transition: all 0.3s ease 0s;
         }
         &.active-burger{
             & span {
                 opacity: 0;
                 visibility: hidden;
+                transition: all 0.3s ease 0s;
             }
             &:after{
                 bottom: 6px;
                 transform: rotate(45deg);
+                transition: all 0.3s ease 0s;
             }
             &:before{
                 top: 8px;
                 transform: rotate(-45deg);
+                transition: all 0.3s ease 0s;
             }
         }
         @media (min-width: 768px){
@@ -121,6 +136,7 @@
         column-gap: 40px;
         row-gap: 15px;
         @media (max-width: 768px){
+            padding-top: 88px;
             row-gap: 40px;
             flex-direction: column;
         }

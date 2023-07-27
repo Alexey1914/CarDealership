@@ -74,10 +74,12 @@ function showBurger() {
    const burgerMenu = document.querySelector('.header__nav');
    const body = document.querySelector('body');
    const burgerClass = document.querySelector('.header__burger');
+   const logoHeader = document.querySelector('.header__logo');
 
    burgerClass.addEventListener('click', function() {
        burgerClass.classList.toggle('active-burger');
        burgerMenu.classList.toggle('active-burger');
+       logoHeader.classList.toggle('active-burger');
        body.classList.toggle('lock');
    })
 };
