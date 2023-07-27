@@ -450,6 +450,74 @@ a {
   border-radius: 50%;
 }
 
+.button-class {
+  color: #FFF;
+  font-weight: 700;
+  line-height: 116.667%;
+  background: #FA002C;
+  border-radius: 8px;
+}
+
+.page__welcome {
+  padding-top: 90px;
+}
+
+.welcome__wrapper {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+.welcome__content {
+  text-align: center;
+}
+
+.welcome__title {
+  font-size: calc(26px + 26 * ((100vw - 320px) / 1604));
+  font-weight: 900;
+  line-height: 119.231%;
+}
+
+.welcome__title:not(:last-child) {
+  padding-bottom: 20px;
+}
+
+.welcome__img {
+  display: none;
+}
+
+.welcome__desc {
+  font-size: calc(16px + 4 * ((100vw - 320px) / 1604));
+  font-weight: 500;
+  line-height: 160%;
+}
+
+.welcome__desc:not(:last-child) {
+  padding-bottom: 44px;
+}
+
+.welcome__btn {
+  font-size: calc(20px + 4 * ((100vw - 320px) / 1604));
+  padding: 18px 54.5px;
+}
+
+.welcome__btn:not(:last-child) {
+  padding-bottom: 20px;
+}
+
+.welcome__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 53%;
+          flex: 0 0 53%;
+  -webkit-transform: translate(-100%, 0);
+      -ms-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+}
+
+.welcome__image img {
+  max-width: 100%;
+}
+
 @media (min-width: 768px) {
   .header__burger {
     display: none;
@@ -494,6 +562,32 @@ a {
     -o-transition: background-color 0.3s ease 0s;
     transition: background-color 0.3s ease 0s;
     background: #FA002C;
+  }
+
+  .button-class {
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .button-class:hover {
+    color: #000000;
+    background: #FFF;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .page__welcome {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 220px;
+  }
+
+  .welcome__content {
+    max-width: 47%;
+    text-align: left;
   }
 }
 
@@ -560,6 +654,35 @@ a {
   }
 
   .media__call {
+    display: none;
+  }
+
+  .welcome__title:not(:last-child) {
+    padding-bottom: 32px;
+  }
+
+  .welcome__img {
+    display: block;
+  }
+
+  .welcome__img img {
+    max-width: 100%;
+  }
+
+  .welcome__img:not(:last-child) {
+    padding-bottom: 20px;
+  }
+
+  .welcome__desc:not(:last-child) {
+    padding-bottom: 32px;
+  }
+
+  .welcome__btn {
+    padding: 16px 0;
+    width: 100%;
+  }
+
+  .welcome__image {
     display: none;
   }
 }

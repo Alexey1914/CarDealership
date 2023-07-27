@@ -1,3 +1,102 @@
 @import '_settings';
 @import '_header';
 @import '_footer';
+
+.button-class {
+    color: #FFF;
+    font-weight: 700;
+    line-height: 116.667%; 
+    background: $redColor;
+    border-radius: 8px;
+    @media (min-width: 768px){
+        transition: all 0.3s ease 0s;
+        &:hover{
+            color: $fontColor1;
+            background: #FFF;
+            transition: all 0.3s ease 0s;
+        }
+    }
+}
+
+.page {
+    &__welcome {
+        padding-top: 90px;
+        @media (min-width: 768px){
+            display: flex;
+            padding-top: 220px;
+        }
+    }
+}
+.welcome {
+    &__wrapper {
+        flex: 0 0 100%;
+    }
+    &__container {
+    }
+    &__content{
+        text-align: center;
+        @media (min-width: 768px){
+            max-width: 47%;
+            text-align: left;
+        }
+    }
+    &__title {
+        @include adaptivFont(52, 26);
+        font-weight: 900;
+        line-height: 119.231%;
+        &:not(:last-child){
+            padding-bottom: 20px;
+        }
+        @media (max-width: 768px){
+            &:not(:last-child){
+                padding-bottom: 32px;
+            }
+        }
+    }
+    &__img {
+        display: none;
+        @media (max-width: 768px){
+            display: block;
+            & img {
+                max-width: 100%;
+            }
+            &:not(:last-child){
+                padding-bottom: 20px;
+            }
+        }
+    }
+    &__desc {
+        @include adaptivFont(20, 16);
+        font-weight: 500;
+        line-height: 160%;
+        &:not(:last-child){
+            padding-bottom: 44px;
+        }
+        @media (max-width: 768px){
+            &:not(:last-child){
+                padding-bottom: 32px;
+            }
+        }
+    }
+    &__btn {
+        @include adaptivFont(24, 20);
+        padding: 18px 54.5px;
+        &:not(:last-child){
+            padding-bottom: 20px;
+        }
+        @media (max-width: 768px){
+            padding: 16px 0;
+            width: 100%;
+        }
+    }
+    &__image {
+        flex: 0 0 53%;
+        transform: translate(-100%, 0);
+        & img {
+            max-width: 100%;
+        }
+        @media (max-width: 768px){
+            display: none;
+        }
+    }
+}
