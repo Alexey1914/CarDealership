@@ -30,11 +30,6 @@
             flex: 1 1 auto;
             position: relative;
             z-index: 66;
-            transition: transform 0.5s ease 0s;
-            &.active-burger{
-                transform: translateX(110%);
-                transition: transform 0.5s ease 0s;
-            }
         }
     }
     &__nav {

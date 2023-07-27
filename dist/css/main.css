@@ -515,22 +515,6 @@ a {
             flex: 1 1 auto;
     position: relative;
     z-index: 66;
-    -webkit-transition: -webkit-transform 0.5s ease 0s;
-    transition: -webkit-transform 0.5s ease 0s;
-    -o-transition: transform 0.5s ease 0s;
-    transition: transform 0.5s ease 0s;
-    transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
-  }
-
-  .header__logo.active-burger {
-    -webkit-transform: translateX(110%);
-        -ms-transform: translateX(110%);
-            transform: translateX(110%);
-    -webkit-transition: -webkit-transform 0.5s ease 0s;
-    transition: -webkit-transform 0.5s ease 0s;
-    -o-transition: transform 0.5s ease 0s;
-    transition: transform 0.5s ease 0s;
-    transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
   }
 
   .header__nav {
