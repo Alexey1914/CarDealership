@@ -9,15 +9,25 @@
     background: $redColor;
     border-radius: 8px;
     @media (min-width: 768px){
-        transition: all 0.3s ease 0s;
+        transition: all 0.4s ease 0s;
         &:hover{
             color: $fontColor1;
             background: #FFF;
-            transition: all 0.3s ease 0s;
+            transition: all 0.4s ease 0s;
         }
     }
 }
-
+.title-class {
+    @include adaptivFont(44, 28);
+    font-weight: 800;
+    line-height: 122.727%;
+}
+.desc-class {
+    @include adaptivFont(24, 16);
+    line-height: 133.333%; 
+}
+// -------------------------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------------------------
 .page {
     &__welcome {
         padding-top: 90px;
@@ -59,6 +69,7 @@
             display: block;
             & img {
                 max-width: 100%;
+                pointer-events: none;
             }
             &:not(:last-child){
                 padding-bottom: 20px;
@@ -97,6 +108,94 @@
         }
         @media (max-width: 768px){
             display: none;
+        }
+    }
+}
+// -------------------------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------------------------
+.page {
+    &__advantages {
+        background: #F4F6F8;
+        padding-top: 129px;
+        padding-bottom: 119px;
+    }
+}
+.advantages {
+    &__container {
+    }
+    &__head {
+        text-align: center;
+        &:not(:last-child){
+            padding-bottom: 40px;
+        }
+    }
+    &__title {
+        &:not(:last-child){
+            padding-bottom: 24px;
+        }
+    }
+    &__desc {
+        &:not(:last-child){
+            padding-bottom: 48px;
+        }
+    }
+    &__button {
+        font-weight: 600;
+        font-size: 20px;
+        padding: 14px 40px;
+        &:not(:last-child){
+            padding-bottom: 24px;
+        }
+    }
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 25px;
+        row-gap: 12px;
+    }
+    &__column {
+        flex: 1 1 auto;
+        padding: 24px 32px 85px 32px;
+        border-radius: 20px;
+        background: #FFF;
+        box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
+        position: relative;
+        @media (max-width: 425px){
+            padding: 32px 20px;
+        }
+    }
+}
+.column-advantages {
+    &__title {
+        @include adaptivFont(36, 24);
+        font-weight: 700;
+        line-height: 122.222%;
+        &:not(:last-child){
+            padding-bottom: 27px;
+        }
+        @media (max-width: 425px){
+            padding-left: 117px;
+        }
+    }
+    &__desc {
+        max-width: 302px;
+        color: rgba(0, 0, 0, 0.80);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 175%;
+    }
+    &__img {
+        position: absolute;
+        bottom: 18px;
+        right: 30px;
+        & img {
+            width: 100%;
+        }
+        @media (max-width: 425px){
+            top: 17px;
+            bottom: auto;
+            right: auto;
+            left: 20px;
         }
     }
 }

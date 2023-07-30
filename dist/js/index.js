@@ -81,4 +81,19 @@ function showBurger() {
        body.classList.toggle('lock');
    })
 };
-showBurger()
+showBurger();
+
+const headerClass = document.querySelector('.header');
+const headerBody = document.querySelector('.header__wrapper');
+const headerContainer = document.querySelector('.header__container');
+const callback = function (entries, observer) {
+   if (entries[0].isIntersecting) {
+      headerBody.classList.remove('_active__scroll');
+      headerContainer.classList.remove('_active__scroll');
+   } else {
+      headerBody.classList.add('_active__scroll');
+      headerContainer.classList.add('_active__scroll');
+   }
+}
+const headerObserver = new IntersectionObserver(callback);
+headerObserver.observe(headerClass);

@@ -10,6 +10,11 @@
         left: 0;
         width: 100%;
         z-index: 30;
+        transition: background-color 0.4s ease 0s;
+        &._active__scroll{
+            background: #FFF;
+            transition: background-color 0.4s ease 0s;
+        }
     }
     &__container {
         display: flex;
@@ -18,11 +23,17 @@
         column-gap: 15px;
         padding-top: 39px;
         padding-bottom: 39px;
+        transition: all 0.4s ease 0s;
         @media (max-width: 768px){
             padding-top: 8px;
             padding-bottom: 8px;
             justify-content: start;
             column-gap: 20px;
+        }
+        &._active__scroll{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            transition: all 0.4s ease 0s;
         }
     }
     &__logo {
