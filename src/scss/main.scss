@@ -29,11 +29,16 @@
 // -------------------------------------------------------------------------------------------------------------------
 // -------------------------------------------------------------------------------------------------------------------
 .page {
+    padding-top: 64px;
+    @media (min-width: 768px){
+        padding-top: 138px;
+    }
     &__welcome {
-        padding-top: 90px;
+        padding-top: 26px;
+        padding-bottom: 55px;
         @media (min-width: 768px){
+            padding-top: 82px;
             display: flex;
-            padding-top: 220px;
         }
     }
 }
@@ -118,6 +123,10 @@
         background: #F4F6F8;
         padding-top: 129px;
         padding-bottom: 119px;
+        @media (max-width: 768px){
+            padding-top: 64px;
+            padding-bottom: 64px;
+        }
     }
 }
 .advantages {
@@ -135,8 +144,10 @@
         }
     }
     &__desc {
-        &:not(:last-child){
-            padding-bottom: 48px;
+        @media (min-width: 768px){
+            &:not(:last-child){
+                padding-bottom: 48px;
+            }
         }
     }
     &__button {
@@ -146,12 +157,18 @@
         &:not(:last-child){
             padding-bottom: 24px;
         }
+        @media (max-width: 768px){
+            display: none;
+        }
     }
     &__body {
         display: flex;
         flex-wrap: wrap;
         column-gap: 25px;
         row-gap: 12px;
+        &:not(:last-child){
+            padding-bottom: 32px;
+        }
     }
     &__column {
         flex: 1 1 auto;
@@ -161,20 +178,31 @@
         box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
         position: relative;
         @media (max-width: 425px){
-            padding: 32px 20px;
+            padding: 17px 31px 32px 20px;
         }
     }
 }
 .column-advantages {
-    &__title {
-        @include adaptivFont(36, 24);
-        font-weight: 700;
-        line-height: 122.222%;
+    &__head{
         &:not(:last-child){
             padding-bottom: 27px;
         }
         @media (max-width: 425px){
-            padding-left: 117px;
+            display: flex;
+            flex-wrap: wrap-reverse;
+            align-items: center;
+            gap: 10px;
+            &:not(:last-child){
+                padding-bottom: 5px;
+            }
+        }
+    }
+    &__title {
+        @include adaptivFont(36, 24);
+        font-weight: 700;
+        line-height: 122.222%;
+        @media (max-width: 425px){
+            flex: 1 0 145px
         }
     }
     &__desc {
@@ -189,13 +217,55 @@
         bottom: 18px;
         right: 30px;
         & img {
-            width: 100%;
+            max-width: 100%;
         }
         @media (max-width: 425px){
-            top: 17px;
-            bottom: auto;
-            right: auto;
-            left: 20px;
+            position: static;
+            flex: 0 0 120px;
         }
+    }
+}
+._adaptive__btn{
+    font-weight: 600;
+    font-size: 20px;
+    padding: 14px 0;
+    width: 100%;
+    @media (min-width: 768px){
+        display: none;
+    }
+}
+// -------------------------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------------------------
+.page {
+    &__about {
+        display: flex;
+    }
+}
+.about {
+    &__image {
+        
+    }
+    &__wrapper {
+        
+    }
+    &__container {
+    }
+    &__body {
+    }
+    &__title {
+    }
+    &__desc {
+    }
+    &__list {
+    }
+    &__note {
+    }
+    &__btn {
+    }
+}
+.list-about {
+    &__item {
+    }
+    &__icon {
     }
 }

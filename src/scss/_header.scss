@@ -10,10 +10,11 @@
         left: 0;
         width: 100%;
         z-index: 30;
-        transition: background-color 0.4s ease 0s;
+        transition: all 0.4s ease 0s;
         &._active__scroll{
             background: #FFF;
-            transition: background-color 0.4s ease 0s;
+            box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease 0s;
         }
     }
     &__container {
