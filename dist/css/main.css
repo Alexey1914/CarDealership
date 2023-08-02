@@ -160,6 +160,10 @@ a {
   display: none;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -850,9 +854,15 @@ a {
     z-index: 5;
   }
 
+  .about__body {
+    max-width: 590px;
+  }
+}
+
+@media (min-width: 1280px) {
   .about__picture {
     position: relative;
-    padding-top: 666px;
+    padding-top: 656px;
     max-width: 47.3%;
   }
 
@@ -866,12 +876,6 @@ a {
        object-fit: cover;
   }
 
-  .about__body {
-    max-width: 590px;
-  }
-}
-
-@media (min-width: 1280px) {
   .about__body {
     padding: 52px 62px 50px 0;
   }
@@ -1043,14 +1047,18 @@ a {
   }
 }
 
-@media (max-width: 1920px) and (min-width: 1280px) {
+@media (max-width: 1280px) and (min-width: 768px) {
+  .about__picture {
+    padding-top: 636px;
+  }
+
   .about__container {
-    padding-left: 36.3%;
+    padding-left: 55.3%;
   }
 }
 
-@media (max-width: 1280px) and (min-width: 768px) {
+@media (max-width: 1920px) and (min-width: 1280px) {
   .about__container {
-    padding-left: 55.3%;
+    padding-left: 36.3%;
   }
 }

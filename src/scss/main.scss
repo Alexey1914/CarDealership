@@ -253,9 +253,9 @@
         }
     }
     &__picture{
-        @media (min-width: 768px){
+        @media (min-width: 1280px){
             position: relative;
-            padding-top: 666px;
+            padding-top: 656px;
             max-width: 47.3%;
             & img {
                 position: absolute;
@@ -265,6 +265,9 @@
                 left: 0;
                 object-fit: cover;
             }
+        }
+        @media (max-width: 1280px) and (min-width: 768px){
+            padding-top: 636px;
         }
         & img {
             max-width: 100%;
