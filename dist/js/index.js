@@ -97,3 +97,37 @@ const callback = function (entries, observer) {
 }
 const headerObserver = new IntersectionObserver(callback);
 headerObserver.observe(headerClass);
+
+const swiper = new Swiper('.catalog__slider', {
+   simulateTouch: false,
+   loop: true,
+   slidesPerView: 3, 
+   spaceBetween: 24,
+   navigation: {
+      nextEl: '.slider__next',
+      prevEl: '.slider__prev',
+   },
+   breakpoints: {
+      1280: {
+         slidesPerView: 3,
+      },
+      960: {
+         slidesPerView: 2.5,
+      },
+      768: {
+         slidesPerView: 2,
+      },
+      560: {
+         slidesPerView: 1.5,
+      },
+      425: {
+         slidesPerView: 1.25,
+      },
+      375: {
+         slidesPerView: 1.2,
+      },
+      200: {
+         slidesPerView: 1,
+      },
+   }
+});
