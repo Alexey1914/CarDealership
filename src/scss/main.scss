@@ -441,7 +441,9 @@
     &__next{
         display: none;
         @media (min-width: 768px){
-            display: block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             width: 63px;
             height: 63px;
             border-radius: 50%;
@@ -467,6 +469,27 @@
             right: 0;
         }
     }
+    &__pagination{
+        position: absolute;
+        bottom: 0;
+    }
+}
+.swiper-horizontal>.swiper-pagination-bullets, 
+.swiper-pagination-bullets.swiper-pagination-horizontal, 
+.swiper-pagination-custom, 
+.swiper-pagination-fraction{
+    bottom: -28px;
+}
+.swiper-pagination-bullet{
+    width: 100px;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    transition: background-color 0.3s;
+}
+.swiper-pagination-bullet-active{
+    transition: background-color 0.3s;
+    background: $redColor;
 }
 .swiper-button-prev,
 .swiper-button-next{

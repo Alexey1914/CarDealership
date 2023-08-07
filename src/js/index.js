@@ -101,11 +101,13 @@ headerObserver.observe(headerClass);
 const swiper = new Swiper('.catalog__slider', {
    simulateTouch: false,
    loop: true,
-   slidesPerView: 3, 
    spaceBetween: 24,
    navigation: {
       nextEl: '.slider__next',
       prevEl: '.slider__prev',
+   },
+   pagination: {
+      el: '.slider__pagination',
    },
    breakpoints: {
       1280: {
