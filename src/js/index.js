@@ -133,3 +133,41 @@ const swiper = new Swiper('.catalog__slider', {
       },
    }
 });
+
+const reviewSlider = new Swiper('.slider-review__body', {
+   centeredSlides: true,
+   simulateTouch: true,
+   slidesPerView: 3,
+   loop: true,
+   spaceBetween: 24,
+   navigation: {
+      nextEl: '.slider__next',
+      prevEl: '.slider__prev',
+   },
+   pagination: {
+      el: '.slider__pagination',
+   },
+   // breakpoints: {
+   //    1280: {
+   //       slidesPerView: 3,
+   //    },
+   //    960: {
+   //       slidesPerView: 2.5,
+   //    },
+   //    768: {
+   //       slidesPerView: 2,
+   //    },
+   //    560: {
+   //       slidesPerView: 1.5,
+   //    },
+   //    425: {
+   //       slidesPerView: 1.25,
+   //    },
+   //    375: {
+   //       slidesPerView: 1.2,
+   //    },
+   //    200: {
+   //       slidesPerView: 1,
+   //    },
+   // }
+});
