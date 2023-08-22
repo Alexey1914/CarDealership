@@ -7,6 +7,7 @@
 // </div>
 // ---------------------------------------HTML---------------------------------------
 const spollersAll = document.querySelectorAll('[data-spollers]');
+const spolierIcon = document.querySelector('.spoilers-process__icon ')
 // ----------------------------------------------------
 if (spollersAll.length > 0) {
    const spollersStatic = Array.from(spollersAll).filter(function (item, index, self) {

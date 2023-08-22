@@ -662,3 +662,117 @@
 }
 // -------------------------------------------------------------------------------------------------------------------
 // -------------------------------------------------------------------------------------------------------------------
+.page {
+    &__process {
+        padding: 100px 0;
+        @media (max-width: 768px){
+            padding: 64px 0;
+        }
+    }
+}
+.process {
+    &__head {
+        &:not(:last-child){
+            padding-bottom: 40px;
+            @media (max-width: 768px){
+                padding-bottom: 32px;
+            }
+        }
+    }
+}
+.spoilers-process {
+    &__wrapper{
+        padding: 32px 0;
+        &:not(:last-child){
+            border-top: 1px solid rgba(0, 0, 0, 0.30);
+        }
+        &:last-child{
+            border-top: 1px solid rgba(0, 0, 0, 0.30);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.30);
+        }
+        @media (max-width: 1280px){
+            padding: 24px 0;
+        }
+    }
+    &__head {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-left: 102px;
+        cursor: pointer;
+        @media (max-width: 1280px){
+            padding-left: 0;
+        }
+    }
+    &__num {
+        @include adaptivFont(80, 52);
+        color: $redColor;
+        font-weight: 700;
+        line-height: 110%;
+    }
+    &__title {
+        flex: 1 1 auto;
+        padding-left: 109px;
+        @include adaptivFont(36, 20);
+        font-weight: 600;
+        line-height: 122.222%; 
+        @media (max-width: 1280px){
+            padding-left: 0;
+        }
+        @media (max-width: 768px){
+            max-width: 180px;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 24px;
+        padding-top: 32px;
+    }
+}
+.process-list {
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+        gap: 16px;
+        max-width: 956px;
+        @media (max-width: 1280px){
+            max-width: none;
+        }
+    }
+    &__title {
+        flex: 1 1 auto;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px; 
+    }
+    &__text {
+        color: rgba(0, 0, 0, 0.80);
+        flex: 0 1 519px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 155.556%;
+    }
+    &__link {
+        display: block;
+        position: relative;
+        padding-left: 34px;
+        font-size: 16px;
+        line-height: 150%;
+        color: $redColor;
+        margin-top: 8px;
+        &:before{
+            content: url('@img/page/download_icon.svg');
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        @media (min-width: 768px){
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
