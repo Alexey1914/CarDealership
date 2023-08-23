@@ -1066,6 +1066,27 @@ body.lock {
   line-height: 122.222%;
 }
 
+.spoilers-process__icon {
+  width: 100%;
+  max-width: 64px;
+  height: auto;
+  max-height: 64px;
+  border-radius: 50%;
+  background: #FA002C;
+  position: relative;
+}
+
+.spoilers-process__icon:before {
+  position: absolute;
+  font-size: 22px;
+  color: #FFFFFF;
+  top: 37%;
+  left: 40%;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
 .spoilers-process__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1335,6 +1356,17 @@ body.lock {
     padding-left: 0;
   }
 
+  .spoilers-process__icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .spoilers-process__icon:before {
+    font-size: 18px;
+    top: 34%;
+    left: 40%;
+  }
+
   .process-list__item {
     max-width: none;
   }
@@ -1504,10 +1536,6 @@ body.lock {
 
   .process__head:not(:last-child) {
     padding-bottom: 32px;
-  }
-
-  .spoilers-process__title {
-    max-width: 180px;
   }
 }
 

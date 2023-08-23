@@ -719,8 +719,31 @@
         @media (max-width: 1280px){
             padding-left: 0;
         }
-        @media (max-width: 768px){
-            max-width: 180px;
+    }
+    &__icon{
+        width: 100%;
+        max-width: 64px;
+        height: auto;
+        max-height: 64px;
+        border-radius: 50%;
+        background: $redColor;
+        position: relative;
+        &:before{
+            position: absolute;
+            font-size: 22px;
+            color: $mainColor;
+            top: 37%;
+            left: 40%;
+            transform: rotate(-90deg);
+        }
+        @media (max-width: 1280px){
+            width: 44px;
+            height: 44px;
+            &:before{
+                font-size: 18px;
+                top: 34%;
+                left: 40%;
+            }
         }
     }
     &__list {
