@@ -814,9 +814,9 @@
         z-index: 2;
     }
     &__body {
-        padding: 100px 0;
+        padding-bottom: 100px;
         @media (max-width: 768px){
-            padding: 64px 0;
+            padding-bottom: 64px;
         }
     }
     &__title {
@@ -831,15 +831,44 @@
         }
     }
     &__advantages {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 23px;
         &:not(:last-child){
             padding-bottom: 32px;
         }
     }
     &__desc {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
     }
     &__text {
+        flex: 0 1 631px;
+        @include adaptivFont(24, 16);
+        font-weight: 400;
+        line-height: 133.333%;
     }
     &__link {
+        position: relative;
+        padding-left: 34px;
+        font-size: 20px;
+        line-height: 150%;
+        color: $redColor;
+        margin-top: 8px;
+        &:before{
+            content: url('@img/page/download_icon.svg');
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        @media (min-width: 768px){
+            &:hover{
+                text-decoration: underline;
+            }
+        }
     }
     &__usa {
     }
@@ -857,13 +886,18 @@
 }
 .advantages-guaranties {
     &__column {
-        display: flex;
+        flex: 1 1 411px;
+        max-height: 160px;
+        display: inline-flex;
         align-items: center;
         padding: 44px 40px;
         border-radius: 20px;
         background: #FFF;
         box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
         gap: 20px;
+        @media (max-width: 768px){
+            padding: 28px 24px;
+        }
     }
     &__icon {
     }
@@ -886,14 +920,36 @@
         }
     }
     &__content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
     }
     &__column {
+        flex: 1 1 519px;
+        padding: 40px 44px;
+        border-radius: 20px;
+        background: #FFF;
+        box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
     }
 }
 .usa-column {
     &__title {
+        @include adaptivFont(32, 20);
+        font-weight: 700;
+        line-height: 137.5%;
+        &:not(:last-child){
+            padding-bottom: 20px;
+        }
     }
     &__desc {
+        color: rgba(0, 0, 0, 0.80);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 160%;
     }
 }
-
+.usa-column_wide{
+    flex: 1 1 737px;
+}
+// -------------------------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------------------------
